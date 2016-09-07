@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XappNinjaCross.ViewModels;assembly=XappNinjaCross"
+             x:Class="XappNinjaCross.App">
+
+<Application.Resources>
+  <ResourceDictionary>
+    <!--Colores-->    
+    <Color x:Key="MainColor">#0088cc</Color>
+    <viewModels:MainViewModel x:Key="Main"
+                              Name="David"
+                              LastName="Zambrano">      
+    </viewModels:MainViewModel>
+
+
+    <OnPlatform x:Key="GeneralPadding"
+                x:TypeArguments="Thickness"
+                iOS="10"
+                Android="10"
+                WinPhone="10" />
+    <!--Estilos-->
+    <Style x:Key="MainButton" TargetType="Button">
+      <Setter Property="TextColor" Value="#ffffff"></Setter>
+      <Setter Property="BackgroundColor" Value="{StaticResource MainColor}"></Setter>      
+    </Style>
+    <!--Plantillas-->    
+        <DataTemplate x:Key="SampleItemTemplate">
+        <ViewCell>
+          <StackLayout>
+            <Label Text="Nombre"></Label>
+            <Label Text="Apellido"></Label>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+  </ResourceDictionary>
+</Application.Resources>
+</Application>

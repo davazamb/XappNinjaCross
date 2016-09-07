@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XappNinjaCross.Pages.MainPage"
+             Padding="{StaticResource GeneralPadding}"
+             Title="Principal">
+  
+  <StackLayout BindingContext="{Binding Source={StaticResource Main}}">
+    <Label Text="Name" />
+    <Entry Text="{Binding Name}"></Entry>
+    <Label Text="Last Name" />
+    <Entry Text="{Binding LastName}"></Entry>
+    <Button
+      Style="{StaticResource MainButton}"
+      Clicked="Click" Text="Click Me"></Button>
+  </StackLayout>
+</ContentPage>
